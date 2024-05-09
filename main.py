@@ -12,7 +12,7 @@ screen.bgcolor("black")
 screen.setup(600, 600)
 
 snake = Snake()
-food = Food()
+food = Food(snake.t)
 score = ScoreBd()
 
 screen.listen()
@@ -29,7 +29,7 @@ while game_is_on:
     snake.move()
 
     if food.distance(snake.head) < 14:
-        food.move_food()
+        food.move_food(snake.t)
         snake.update_snakes(1)
         score.update_score()
         time.sleep(0.2)

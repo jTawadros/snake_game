@@ -13,10 +13,11 @@ class ScoreBd(Turtle):
     def update_score(self):
         self.clear()
         self.score += 1
-        self.setpos(0, 280)
-        self.write(f"Score: {self.score}", False, align="center", font=("Arial", 14, 'normal'))
+        self.setpos(0, 270)
+        self.write(f"========== Score: {self.score} ==========", False, align="center", font=("Arial", 14, 'normal'))
 
     def game_over(self):
+        self.color("red")
         self.setpos(0, 0)
         self.write("Game Over", False, align="center", font=("Arial", 24, 'normal'))
 
